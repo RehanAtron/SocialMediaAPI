@@ -13,6 +13,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 ));
 
 builder.Services.AddControllers();
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 // Read JWT settings from appsettings.json
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
